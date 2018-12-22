@@ -214,6 +214,7 @@ oc_requires_homeworld_preference_to_change = {
 # scope: country 
 oc_requires_species_have_new_trait = {
 	OR = {
+		oc_has_survivor_species_trait = yes
 		oc_has_cybernetic_species_trait = yes
 		oc_has_latent_psionic_species_trait = yes
 		oc_has_synthetic_species_trait = yes

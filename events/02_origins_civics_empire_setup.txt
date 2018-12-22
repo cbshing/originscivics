@@ -112,6 +112,13 @@ country_event = {
 		
 		# add new trait to species
 		if = { limit = { oc_requires_species_have_new_trait = yes } 
+			if = { limit = { oc_has_survivor_species_trait = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_survivor = yes
+			}
 			if = { limit = { oc_has_cybernetic_species_trait = yes } 
 				random_owned_pop = { 
 					limit = { NOT = { is_same_species = owner_species } }
